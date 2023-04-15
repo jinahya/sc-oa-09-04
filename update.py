@@ -143,7 +143,7 @@ def insert(info):
         %d, %d, %d
         )
         """ % (_TABLE,
-               info.sol_year, info.date_kind,
+               info.sol_year, info.sol_month,
                info.locdate, info.date_kind, info.date_name, info.seq, info.is_holiday, info.remarks,
                info.kst, info.sun_longitude,
                info.year, info.month, info.day
@@ -175,7 +175,7 @@ def update(info):
         %d, %d, %d
         )
         """ % (_TABLE,
-               info.sol_year, info.date_kind,
+               info.sol_year, info.sol_month,
                info.locdate, info.date_kind, info.date_name, info.seq, info.is_holiday, info.remarks,
                info.kst, info.sun_longitude,
                info.year, info.month, info.day
@@ -195,7 +195,7 @@ def main():
     while ___sol_year <= end_year:
         delete(___sol_year, '01')
         get_holi_de_info(___sol_year)
-        get_rest_de_info(___sol_year)
+        # get_rest_de_info(___sol_year)
         ___sol_year += 1
 
 
